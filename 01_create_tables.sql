@@ -10,3 +10,10 @@ CREATE TABLE Continente(
 CREATE TABLE Raca(
 	Nome varchar(80) primary key
 );
+
+// Guerra
+CREATE TABLE Guerra(
+	Nome varchar(80) primary key,
+	Data_Incio date,
+	Data_Fim date
+);
