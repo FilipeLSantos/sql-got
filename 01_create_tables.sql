@@ -17,3 +17,8 @@ CREATE TABLE Guerra(
 	Data_Incio date,
 	Data_Fim date
 );
+
+// Profissão
+CREATE TABLE Profissao(
+	Nome varchar(80) primary key
+);
