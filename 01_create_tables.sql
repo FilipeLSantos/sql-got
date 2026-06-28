@@ -22,3 +22,11 @@ CREATE TABLE Guerra(
 CREATE TABLE Profissao(
 	Nome varchar(80) primary key
 );
+
+// Dragão
+CREATE TABLE Dragao(
+	Nome varchar(80) primary key,
+	Estado varchar(15),
+	Tamanho numeric(8,2),
+	Cor varchar(30)
+);
