@@ -30,3 +30,12 @@ CREATE TABLE Dragao(
 	Tamanho numeric(8,2),
 	Cor varchar(30)
 );
+
+// Profecia
+CREATE TABLE Profecia(
+	Nome varchar(80),
+	Origem varchar(80),
+	Descricao varchar(150),
+
+	primary key (Nome, Origem)
+);
