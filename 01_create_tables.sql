@@ -39,3 +39,11 @@ CREATE TABLE Profecia(
 
 	primary key (Nome, Origem)
 );
+
+
+// Arma
+CREATE TABLE Arma(
+	Nome varchar(50) primary key,
+	Tipo varchar(30),
+	Periodo_Pertencimento int
+);
