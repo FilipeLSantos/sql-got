@@ -40,6 +40,11 @@ CREATE TABLE Profecia(
 	primary key (Nome, Origem)
 );
 
+// Tipo Arma
+CREATE TABLE TipoArma(
+	Tipo varchar(100) primary key,
+    Material varchar(100) not null
+);
 
 // Arma
 CREATE TABLE Arma(
