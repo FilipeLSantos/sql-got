@@ -6,11 +6,6 @@ CREATE TABLE Continente(
 	Info_Climaticas varchar(150)
 );
 
-// Raça
-CREATE TABLE Raca(
-	Nome varchar(80) primary key
-);
-
 // Guerra
 CREATE TABLE Guerra(
 	Nome varchar(80) primary key,
@@ -50,5 +45,31 @@ CREATE TABLE TipoArma(
 CREATE TABLE Arma(
 	Nome varchar(50) primary key,
 	Tipo varchar(30),
-	Periodo_Pertencimento int
+	Periodo_Pertencimento int,
+
+	constraint fk_arma_tipo foreign key (Tipo) references TipoArma(Tipo)
+);
+
+// Raça
+CREATE TABLE Raca(
+	Nome varchar(80) primary key
+);
+
+// Caracterisiticas Fisicas
+CREATE TABLE CaracteristicasFisicas(
+	Nome_Raca varchar(100),
+	Cor_Cabelos varchar(100),
+	Cor_Olhos varchar(100),
+
+	primary key(Nome_Raca, Cor_Cabelos, Cor_Olhos)
+);
+
+// Caracterisiticas
+CREATE TABLE Caracteristicas(
+	Nome_Raca varchar(100),
+	Caracteristicas varchar(100),
+
+	primary key(Nome_Raca, Caracteristicas),
+
+	constraint fk_caracteristicas_raca foreign key (Nome_Raca) references Raca(Nome)
 );
