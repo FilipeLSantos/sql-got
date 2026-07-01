@@ -647,7 +647,7 @@ CREATE TABLE Associacao_Profetica (
     Nome_Profecia VARCHAR(80) NOT NULL,
     Origem_Profecia VARCHAR(50) NOT NULL,
 	
-    CONSTRAINT pk_associacao_profetica PRIMARY KEY (Tipo, ID_Personagem, Nome_Profecia, Origem_Profecia),
+    CONSTRAINT pk_associacao_profetica PRIMARY KEY (Tipo, ID_Personagem, Nome_Profecia, Origem_Profecia)
 	CONSTRAINT fk_id_personagem FOREIGN KEY (ID_Personagem)
         REFERENCES Personagem(ID)
         ON DELETE RESTRICT,
